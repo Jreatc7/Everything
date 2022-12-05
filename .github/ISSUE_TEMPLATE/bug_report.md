@@ -30,4 +30,5 @@ Add the log file output from `%TEMP%\EverythingToolbar.log` below.
 ```
 Replace this line with the log file output.
 ```
+
 </details>

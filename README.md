@@ -26,20 +26,23 @@ Demo
 Requirements
 ------------
 
-- [.NET Framework](https://dotnet.microsoft.com/download/dotnet-framework) &ge; 4.7 ([how to check](https://user-images.githubusercontent.com/14129585/104021832-ff36e080-5206-11eb-9f5f-10e4381992f9.jpg))
+- [.NET Framework](https://dotnet.microsoft.com/download/dotnet-framework) &ge;
+  4.7 ([how to check](https://user-images.githubusercontent.com/14129585/104021832-ff36e080-5206-11eb-9f5f-10e4381992f9.jpg))
 - [Everything](https://www.voidtools.com/) &ge; 1.4.1 must be running (lite version not supported)
 - High DPI support requires at least Windows 10 Creators Update.
 
 Install
 -------
+
 - Make sure [Everything](https://www.voidtools.com) is installed and running
 - Install EverythingToolbar using one of the following methods
-  - Download the [EverythingToolbar](https://github.com/stnkl/EverythingToolbar/releases) installer
-  - [Chocolatey](https://chocolatey.org/): `choco install everythingtoolbar`
-  - [winget](https://github.com/microsoft/winget-cli/): `winget install everythingtoolbar`
+    - Download the [EverythingToolbar](https://github.com/stnkl/EverythingToolbar/releases) installer
+    - [Chocolatey](https://chocolatey.org/): `choco install everythingtoolbar`
+    - [winget](https://github.com/microsoft/winget-cli/): `winget install everythingtoolbar`
 - Enable EverythingToolbar via the context menu of the taskbar
-  - *Note: You will have to open the context menu twice as it doesn't show up the first time you open it.*
-- Adjust size and position after unlocking the taskbar ([demonstration video](https://user-images.githubusercontent.com/17520641/107118574-19a1bf80-6882-11eb-843a-7e854e5d0684.gif))
+    - *Note: You will have to open the context menu twice as it doesn't show up the first time you open it.*
+- Adjust size and position after unlocking the
+  taskbar ([demonstration video](https://user-images.githubusercontent.com/17520641/107118574-19a1bf80-6882-11eb-843a-7e854e5d0684.gif))
 
 Build
 -----
@@ -69,7 +72,9 @@ Keyboard shortcuts
 Rules
 -----
 
-Create custom *open with* commands by selecting <kbd>Rules...</kbd> from settings. By checking <kbd>Automatically apply rules based on condition</kbd> matching files/folders based on the type and regular expression field will execute the corresponding command when opened.
+Create custom *open with* commands by selecting <kbd>Rules...</kbd> from settings. By checking <kbd>Automatically apply
+rules based on condition</kbd> matching files/folders based on the type and regular expression field will execute the
+corresponding command when opened.
 
 Examples:
 
@@ -92,6 +97,8 @@ Customization
 Contribute
 ----------
 
-All kinds of contributions (questions, bug reports, pull requests) are welcome! Helping out with open issues is very much appreciated. As a basic rule, before filing issues, feature requests or anything else, take a look at the issues and check if it has already been reported by another user. If so, engage in the already existing discussion.
+All kinds of contributions (questions, bug reports, pull requests) are welcome! Helping out with open issues is very
+much appreciated. As a basic rule, before filing issues, feature requests or anything else, take a look at the issues
+and check if it has already been reported by another user. If so, engage in the already existing discussion.
 
 You can also help by [translating EverythingToolbar](https://crowdin.com/project/everythingtoolbar).

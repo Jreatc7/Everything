@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
-     xmlns:util="http://schemas.microsoft.com/wix/UtilExtension"
-     xmlns:netfx="http://schemas.microsoft.com/wix/NetFxExtension">
+>
     <Product Id="*" UpgradeCode="744f23c4-7adb-42fa-a781-ac940dc4b454"
              Version="!(bind.fileVersion.EverythingToolbarDll)" Language="1033" Name="EverythingToolbar"
              Manufacturer="Stephan Rumswinkel">
