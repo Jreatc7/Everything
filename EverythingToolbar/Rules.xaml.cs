@@ -1,5 +1,4 @@
-﻿using EverythingToolbar.Helpers;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
@@ -8,6 +7,8 @@ using System.Text.RegularExpressions;
 using System.Windows;
 using System.Xml;
 using System.Xml.Serialization;
+
+using EverythingToolbar.Helpers;
 
 namespace EverythingToolbar
 {
@@ -33,7 +34,7 @@ namespace EverythingToolbar
 
         private void Save(object sender, RoutedEventArgs e)
         {
-            if(SaveRules(rules, (bool)autoApplyRulesCheckbox.IsChecked))
+            if (SaveRules(rules, (bool)autoApplyRulesCheckbox.IsChecked))
             {
                 Properties.Settings.Default.isAutoApplyRules = (bool)autoApplyRulesCheckbox.IsChecked;
                 Properties.Settings.Default.Save();
@@ -160,7 +161,7 @@ namespace EverythingToolbar
             UpdateUI();
         }
 
-        public static bool HandleRule(SearchResult searchResult, string command="")
+        public static bool HandleRule(SearchResult searchResult, string command = "")
         {
             if (searchResult == null)
                 return false;
@@ -188,7 +189,7 @@ namespace EverythingToolbar
                     ShellUtils.CreateProcessFromCommandLine(command, searchResult.Path);
                     return true;
                 }
-                catch(Win32Exception)
+                catch (Win32Exception)
                 {
                     MessageBox.Show(Properties.Resources.MessageBoxFailedToRunCommand + " " + command);
                 }

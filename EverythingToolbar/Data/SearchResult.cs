@@ -1,5 +1,4 @@
-﻿using EverythingToolbar.Helpers;
-using System;
+﻿using System;
 using System.Collections.Specialized;
 using System.Diagnostics;
 using System.IO;
@@ -8,6 +7,8 @@ using System.Security.Principal;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Media;
+
+using EverythingToolbar.Helpers;
 
 namespace EverythingToolbar
 {

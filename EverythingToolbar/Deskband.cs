@@ -1,8 +1,9 @@
-﻿using EverythingToolbar;
-using EverythingToolbar.Properties;
-using System;
+﻿using System;
 using System.Runtime.InteropServices;
 using System.Windows;
+
+using EverythingToolbar;
+using EverythingToolbar.Properties;
 
 namespace CSDeskBand
 {
@@ -71,11 +72,11 @@ namespace CSDeskBand
         }
 
         private void OnFocusRequested(object sender, EventArgs e)
-		{
+        {
             UpdateFocus(true);
-		}
+        }
 
-		private void OnTaskbarEdgeChanged(object sender, TaskbarEdgeChangedEventArgs e)
+        private void OnTaskbarEdgeChanged(object sender, TaskbarEdgeChangedEventArgs e)
         {
             SearchResultsPopup.taskbarEdge = e.Edge;
             OnTaskbarSizeChanged(sender, null);

@@ -1,11 +1,12 @@
-using NHotkey;
-using NHotkey.Wpf;
 using System;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows.Forms;
 using System.Windows.Input;
+
+using NHotkey;
+using NHotkey.Wpf;
 
 namespace EverythingToolbar.Helpers
 {
@@ -189,7 +190,7 @@ namespace EverythingToolbar.Helpers
                 uint virtualKeyCode = (uint)Marshal.ReadInt32(lParam);
                 bool isKeyDown = wParam == (IntPtr)WM_KEYDOWN || wParam == (IntPtr)WM_SYSKEYDOWN;
 
-                if(Keyboard.IsKeyDown(Key.LWin) || Keyboard.IsKeyDown(Key.RWin))
+                if (Keyboard.IsKeyDown(Key.LWin) || Keyboard.IsKeyDown(Key.RWin))
                 {
                     return CallNextHookEx(llKeyboardHookId, nCode, wParam, lParam);
                 }
@@ -237,7 +238,7 @@ namespace EverythingToolbar.Helpers
 
             return CallNextHookEx(llKeyboardHookId, nCode, wParam, lParam);
         }
-        
+
         public static void CloseStartMenu()
         {
             if (searchAppHwnd != null)

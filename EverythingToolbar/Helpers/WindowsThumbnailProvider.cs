@@ -1,11 +1,11 @@
 ﻿using System;
-using System.Runtime.InteropServices;
 using System.IO;
-using System.Windows.Interop;
-using System.Windows.Media.Imaging;
-using System.Windows;
 using System.Linq;
+using System.Runtime.InteropServices;
+using System.Windows;
+using System.Windows.Interop;
 using System.Windows.Media;
+using System.Windows.Media.Imaging;
 
 namespace EverythingToolbar
 {
@@ -42,8 +42,8 @@ namespace EverythingToolbar
         internal interface IShellItem
         {
             void BindToHandler(IntPtr pbc,
-                [MarshalAs(UnmanagedType.LPStruct)]Guid bhid,
-                [MarshalAs(UnmanagedType.LPStruct)]Guid riid,
+                [MarshalAs(UnmanagedType.LPStruct)] Guid bhid,
+                [MarshalAs(UnmanagedType.LPStruct)] Guid riid,
                 out IntPtr ppv);
 
             void GetParent(out IShellItem ppsi);

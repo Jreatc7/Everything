@@ -106,6 +106,15 @@ namespace EverythingToolbar.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Everythingtoolbar.csproj.
+        /// </summary>
+        public static string Assembly_Name {
+            get {
+                return ResourceManager.GetString("Assembly Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Copy.
         /// </summary>
         public static string ContextMenuCopy {
@@ -1011,6 +1020,15 @@ namespace EverythingToolbar.Properties {
         public static string SortByTypeNameDescending {
             get {
                 return ResourceManager.GetString("SortByTypeNameDescending", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Softonic.
+        /// </summary>
+        public static string String {
+            get {
+                return ResourceManager.GetString("String", resourceCulture);
             }
         }
         

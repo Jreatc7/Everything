@@ -1,11 +1,12 @@
-﻿using EverythingToolbar.Helpers;
-using System;
+﻿using System;
 using System.Diagnostics;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Input;
+
+using EverythingToolbar.Helpers;
 
 namespace EverythingToolbar
 {
@@ -51,7 +52,7 @@ namespace EverythingToolbar
             Window rules = new Rules();
             rules.Show();
         }
-        
+
         private void OpenShortcutWindow(object sender, RoutedEventArgs e)
         {
             EverythingSearch.Instance.Reset();

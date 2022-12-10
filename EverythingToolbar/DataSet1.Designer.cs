@@ -10545,9 +10545,10 @@ namespace EverythingToolbar.DataSet1TableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.Odbc.OdbcCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [Filters] WHERE (([ID] = ?) AND ((? = 1 AND [Object Type] IS NULL) OR" +
-                " ([Object Type] = ?)) AND ((? = 1 AND [Object Name] IS NULL) OR ([Object Name] =" +
-                " ?)) AND ([Filter Name] = ?) AND ([Default] = ?))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Filters] WHERE (([ID] = ?) AND ((? = 1 AND [Object
+                                            Type] IS NULL) OR ([Object Type] = ?)) AND ((? = 1 AND [Object Name] IS
+                                            NULL) OR ([Object Name] = ?)) AND ([Filter Name] = ?) AND ([Default] = ?))
+                                        ";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_ID", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("IsNull_Object_Type", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Object Type", global::System.Data.DataRowVersion.Original, true, null));
@@ -10558,8 +10559,10 @@ namespace EverythingToolbar.DataSet1TableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_Default", global::System.Data.Odbc.OdbcType.Bit, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Default", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.Odbc.OdbcCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [Filters] ([Object Type], [Object Name], [Filter Name], [Filter Strin" +
-                "g], [Sort String], [Default], [Description]) VALUES (?, ?, ?, ?, ?, ?, ?)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Filters] ([Object Type], [Object Name], [Filter Name],
+                                            [Filter String], [Sort String], [Default], [Description]) VALUES (?, ?, ?,
+                                            ?, ?, ?, ?)
+                                        ";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Object_Type", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Object Type", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Object_Name", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Object Name", global::System.Data.DataRowVersion.Current, false, null));
@@ -10570,7 +10573,12 @@ namespace EverythingToolbar.DataSet1TableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Description", global::System.Data.Odbc.OdbcType.NText, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Description", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.Odbc.OdbcCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [Filters] SET [Object Type] = ?, [Object Name] = ?, [Filter Name] = ?, [Filter String] = ?, [Sort String] = ?, [Default] = ?, [Description] = ? WHERE (([ID] = ?) AND ((? = 1 AND [Object Type] IS NULL) OR ([Object Type] = ?)) AND ((? = 1 AND [Object Name] IS NULL) OR ([Object Name] = ?)) AND ([Filter Name] = ?) AND ([Default] = ?))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [Filters] SET [Object Type] = ?, [Object Name] = ?, [Filter
+                                            Name] = ?, [Filter String] = ?, [Sort String] = ?, [Default] = ?,
+                                            [Description] = ? WHERE (([ID] = ?) AND ((? = 1 AND [Object Type] IS NULL)
+                                            OR ([Object Type] = ?)) AND ((? = 1 AND [Object Name] IS NULL) OR ([Object
+                                            Name] = ?)) AND ([Filter Name] = ?) AND ([Default] = ?))
+                                        ";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Object_Type", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Object Type", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Object_Name", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Object Name", global::System.Data.DataRowVersion.Current, false, null));
@@ -10601,8 +10609,9 @@ namespace EverythingToolbar.DataSet1TableAdapters {
             this._commandCollection = new global::System.Data.Odbc.OdbcCommand[1];
             this._commandCollection[0] = new global::System.Data.Odbc.OdbcCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ID, [Object Type], [Object Name], [Filter Name], [Filter String], [Sort St" +
-                "ring], [Default], Description FROM Filters";
+            this._commandCollection[0].CommandText = "SELECT ID, [Object Type], [Object Name], [Filter Name], [Filter\r\n                " +
+                "                            String], [Sort String], [Default], Description FROM " +
+                "Filters\r\n                                        ";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -10995,7 +11004,12 @@ namespace EverythingToolbar.DataSet1TableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.InsertCommand = new global::System.Data.Odbc.OdbcCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Guardians] ([Company], [Last Name], [First Name], [E-mail Address], [Job Title], [Business Phone], [Home Phone], [Mobile Phone], [Fax Number], [Address], [City], [State/Province], [ZIP/Postal Code], [Country/Region], [Web Page], [Notes], [Attachments]) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Guardians] ([Company], [Last Name], [First Name],
+                                            [E-mail Address], [Job Title], [Business Phone], [Home Phone], [Mobile
+                                            Phone], [Fax Number], [Address], [City], [State/Province], [ZIP/Postal
+                                            Code], [Country/Region], [Web Page], [Notes], [Attachments]) VALUES (?, ?,
+                                            ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                                        ";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Company", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Company", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Last_Name", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Last Name", global::System.Data.DataRowVersion.Current, false, null));
@@ -11029,10 +11043,11 @@ namespace EverythingToolbar.DataSet1TableAdapters {
             this._commandCollection = new global::System.Data.Odbc.OdbcCommand[1];
             this._commandCollection[0] = new global::System.Data.Odbc.OdbcCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ID, Company, [Last Name], [First Name], [E-mail Address], [Job Title], [Bu" +
-                "siness Phone], [Home Phone], [Mobile Phone], [Fax Number], Address, City, [State" +
-                "/Province], [ZIP/Postal Code], [Country/Region], [Web Page], Notes, Attachments " +
-                "FROM Guardians";
+            this._commandCollection[0].CommandText = @"SELECT ID, Company, [Last Name], [First Name], [E-mail Address],
+                                            [Job Title], [Business Phone], [Home Phone], [Mobile Phone], [Fax Number],
+                                            Address, City, [State/Province], [ZIP/Postal Code], [Country/Region], [Web
+                                            Page], Notes, Attachments FROM Guardians
+                                        ";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -11356,7 +11371,8 @@ namespace EverythingToolbar.DataSet1TableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.Odbc.OdbcCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [Settings] WHERE (([ID] = ?) AND ([ShowWelcome] = ?))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [Settings] WHERE (([ID] = ?) AND ([ShowWelcome] = ?))\r\n              " +
+                "                          ";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_ID", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_ShowWelcome", global::System.Data.Odbc.OdbcType.Bit, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ShowWelcome", global::System.Data.DataRowVersion.Original, false, null));
@@ -11367,8 +11383,9 @@ namespace EverythingToolbar.DataSet1TableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("ShowWelcome", global::System.Data.Odbc.OdbcType.Bit, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ShowWelcome", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.Odbc.OdbcCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [Settings] SET [ShowWelcome] = ? WHERE (([ID] = ?) AND ([ShowWelcome] = ?)" +
-                ")";
+            this._adapter.UpdateCommand.CommandText = "UPDATE [Settings] SET [ShowWelcome] = ? WHERE (([ID] = ?) AND\r\n                  " +
+                "                          ([ShowWelcome] = ?))\r\n                                " +
+                "        ";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("ShowWelcome", global::System.Data.Odbc.OdbcType.Bit, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ShowWelcome", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_ID", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID", global::System.Data.DataRowVersion.Original, false, null));
@@ -11643,9 +11660,11 @@ namespace EverythingToolbar.DataSet1TableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.Odbc.OdbcCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [Student Attendance] WHERE (([ID] = ?) AND ((? = 1 AND [Student] IS N" +
-                "ULL) OR ([Student] = ?)) AND ((? = 1 AND [Attendance Date] IS NULL) OR ([Attenda" +
-                "nce Date] = ?)) AND ((? = 1 AND [Status] IS NULL) OR ([Status] = ?)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Student Attendance] WHERE (([ID] = ?) AND ((? = 1 AND
+                                            [Student] IS NULL) OR ([Student] = ?)) AND ((? = 1 AND [Attendance Date] IS
+                                            NULL) OR ([Attendance Date] = ?)) AND ((? = 1 AND [Status] IS NULL) OR
+                                            ([Status] = ?)))
+                                        ";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_ID", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("IsNull_Student", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Student", global::System.Data.DataRowVersion.Original, true, null));
@@ -11656,15 +11675,20 @@ namespace EverythingToolbar.DataSet1TableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_Status", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Status", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.Odbc.OdbcCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [Student Attendance] ([Student], [Attendance Date], [Status]) VALUES " +
-                "(?, ?, ?)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [Student Attendance] ([Student], [Attendance Date],\r\n                " +
+                "                            [Status]) VALUES (?, ?, ?)\r\n                        " +
+                "                ";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Student", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Student", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Attendance_Date", global::System.Data.Odbc.OdbcType.DateTime, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Attendance Date", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Status", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Status", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.Odbc.OdbcCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [Student Attendance] SET [Student] = ?, [Attendance Date] = ?, [Status] = ? WHERE (([ID] = ?) AND ((? = 1 AND [Student] IS NULL) OR ([Student] = ?)) AND ((? = 1 AND [Attendance Date] IS NULL) OR ([Attendance Date] = ?)) AND ((? = 1 AND [Status] IS NULL) OR ([Status] = ?)))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [Student Attendance] SET [Student] = ?, [Attendance Date] =
+                                            ?, [Status] = ? WHERE (([ID] = ?) AND ((? = 1 AND [Student] IS NULL) OR
+                                            ([Student] = ?)) AND ((? = 1 AND [Attendance Date] IS NULL) OR ([Attendance
+                                            Date] = ?)) AND ((? = 1 AND [Status] IS NULL) OR ([Status] = ?)))
+                                        ";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Student", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Student", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Attendance_Date", global::System.Data.Odbc.OdbcType.DateTime, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Attendance Date", global::System.Data.DataRowVersion.Current, false, null));
@@ -11691,7 +11715,8 @@ namespace EverythingToolbar.DataSet1TableAdapters {
             this._commandCollection = new global::System.Data.Odbc.OdbcCommand[1];
             this._commandCollection[0] = new global::System.Data.Odbc.OdbcCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ID, Student, [Attendance Date], Status FROM [Student Attendance]";
+            this._commandCollection[0].CommandText = "SELECT ID, Student, [Attendance Date], Status FROM [Student\r\n                    " +
+                "                        Attendance]\r\n                                        ";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -12048,7 +12073,14 @@ namespace EverythingToolbar.DataSet1TableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.InsertCommand = new global::System.Data.Odbc.OdbcCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Students] ([Last Name], [First Name], [E-mail Address], [Student ID], [Level], [Room], [Date of Birth], [ID Number], [Home Phone], [Mobile Phone], [Address], [City], [State/Province], [ZIP/Postal Code], [Country/Region], [Web Page], [Notes], [Attachments], [Special Circumstances], [Physician Name], [Physician Phone Number], [Allergies], [Medications], [Insurance Carrier], [Insurance Number]) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Students] ([Last Name], [First Name], [E-mail
+                                            Address], [Student ID], [Level], [Room], [Date of Birth], [ID Number], [Home
+                                            Phone], [Mobile Phone], [Address], [City], [State/Province], [ZIP/Postal
+                                            Code], [Country/Region], [Web Page], [Notes], [Attachments], [Special
+                                            Circumstances], [Physician Name], [Physician Phone Number], [Allergies],
+                                            [Medications], [Insurance Carrier], [Insurance Number]) VALUES (?, ?, ?, ?,
+                                            ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                                        ";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Last_Name", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Last Name", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("First_Name", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "First Name", global::System.Data.DataRowVersion.Current, false, null));
@@ -12090,7 +12122,13 @@ namespace EverythingToolbar.DataSet1TableAdapters {
             this._commandCollection = new global::System.Data.Odbc.OdbcCommand[1];
             this._commandCollection[0] = new global::System.Data.Odbc.OdbcCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT ID, [Last Name], [First Name], [E-mail Address], [Student ID], [Level], Room, [Date of Birth], [ID Number], [Home Phone], [Mobile Phone], Address, City, [State/Province], [ZIP/Postal Code], [Country/Region], [Web Page], Notes, Attachments, [Special Circumstances], [Physician Name], [Physician Phone Number], Allergies, Medications, [Insurance Carrier], [Insurance Number] FROM Students";
+            this._commandCollection[0].CommandText = @"SELECT ID, [Last Name], [First Name], [E-mail Address], [Student
+                                            ID], [Level], Room, [Date of Birth], [ID Number], [Home Phone], [Mobile
+                                            Phone], Address, City, [State/Province], [ZIP/Postal Code],
+                                            [Country/Region], [Web Page], Notes, Attachments, [Special Circumstances],
+                                            [Physician Name], [Physician Phone Number], Allergies, Medications,
+                                            [Insurance Carrier], [Insurance Number] FROM Students
+                                        ";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -12472,9 +12510,10 @@ namespace EverythingToolbar.DataSet1TableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.Odbc.OdbcCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [Students and Guardians] WHERE (([StudentID] = ?) AND ([GuardianID] =" +
-                " ?) AND ((? = 1 AND [Relationship] IS NULL) OR ([Relationship] = ?)) AND ([Emerg" +
-                "ency Contact] = ?))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Students and Guardians] WHERE (([StudentID] = ?) AND
+                                            ([GuardianID] = ?) AND ((? = 1 AND [Relationship] IS NULL) OR
+                                            ([Relationship] = ?)) AND ([Emergency Contact] = ?))
+                                        ";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_StudentID", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "StudentID", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_GuardianID", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "GuardianID", global::System.Data.DataRowVersion.Original, false, null));
@@ -12483,8 +12522,9 @@ namespace EverythingToolbar.DataSet1TableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_Emergency_Contact", global::System.Data.Odbc.OdbcType.Bit, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Emergency Contact", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.Odbc.OdbcCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [Students and Guardians] ([StudentID], [GuardianID], [Relationship], " +
-                "[Emergency Contact]) VALUES (?, ?, ?, ?)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [Students and Guardians] ([StudentID], [GuardianID],\r\n               " +
+                "                             [Relationship], [Emergency Contact]) VALUES (?, ?, " +
+                "?, ?)\r\n                                        ";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("StudentID", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "StudentID", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("GuardianID", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "GuardianID", global::System.Data.DataRowVersion.Current, false, null));
@@ -12492,7 +12532,11 @@ namespace EverythingToolbar.DataSet1TableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Emergency_Contact", global::System.Data.Odbc.OdbcType.Bit, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Emergency Contact", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.Odbc.OdbcCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [Students and Guardians] SET [StudentID] = ?, [GuardianID] = ?, [Relationship] = ?, [Emergency Contact] = ? WHERE (([StudentID] = ?) AND ([GuardianID] = ?) AND ((? = 1 AND [Relationship] IS NULL) OR ([Relationship] = ?)) AND ([Emergency Contact] = ?))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [Students and Guardians] SET [StudentID] = ?, [GuardianID] =
+                                            ?, [Relationship] = ?, [Emergency Contact] = ? WHERE (([StudentID] = ?) AND
+                                            ([GuardianID] = ?) AND ((? = 1 AND [Relationship] IS NULL) OR
+                                            ([Relationship] = ?)) AND ([Emergency Contact] = ?))
+                                        ";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("StudentID", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "StudentID", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("GuardianID", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "GuardianID", global::System.Data.DataRowVersion.Current, false, null));
@@ -12518,8 +12562,9 @@ namespace EverythingToolbar.DataSet1TableAdapters {
             this._commandCollection = new global::System.Data.Odbc.OdbcCommand[1];
             this._commandCollection[0] = new global::System.Data.Odbc.OdbcCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT StudentID, GuardianID, Relationship, [Emergency Contact] FROM [Students an" +
-                "d Guardians]";
+            this._commandCollection[0].CommandText = "SELECT StudentID, GuardianID, Relationship, [Emergency Contact]\r\n                " +
+                "                            FROM [Students and Guardians]\r\n                     " +
+                "                   ";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -12885,7 +12930,12 @@ namespace EverythingToolbar.DataSet1TableAdapters {
             this._commandCollection = new global::System.Data.Odbc.OdbcCommand[1];
             this._commandCollection[0] = new global::System.Data.Odbc.OdbcCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT [File As], [Guardian Name], ID, Company, [Last Name], [First Name], [E-mail Address], [Job Title], [Business Phone], [Home Phone], [Mobile Phone], [Fax Number], Address, City, [State/Province], [ZIP/Postal Code], [Country/Region], [Web Page], Notes, Attachments FROM [Guardians Extended]";
+            this._commandCollection[0].CommandText = @"SELECT [File As], [Guardian Name], ID, Company, [Last Name], [First
+                                            Name], [E-mail Address], [Job Title], [Business Phone], [Home Phone],
+                                            [Mobile Phone], [Fax Number], Address, City, [State/Province], [ZIP/Postal
+                                            Code], [Country/Region], [Web Page], Notes, Attachments FROM [Guardians
+                                            Extended]
+                                        ";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -13056,8 +13106,9 @@ namespace EverythingToolbar.DataSet1TableAdapters {
             this._commandCollection = new global::System.Data.Odbc.OdbcCommand[1];
             this._commandCollection[0] = new global::System.Data.Odbc.OdbcCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ID, [Last Name], [First Name], status, [Number of Days] FROM [Student Atte" +
-                "ndance Count]";
+            this._commandCollection[0].CommandText = "SELECT ID, [Last Name], [First Name], status, [Number of Days] FROM\r\n            " +
+                "                                [Student Attendance Count]\r\n                    " +
+                "                    ";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -13255,7 +13306,14 @@ namespace EverythingToolbar.DataSet1TableAdapters {
             this._commandCollection = new global::System.Data.Odbc.OdbcCommand[1];
             this._commandCollection[0] = new global::System.Data.Odbc.OdbcCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT [Student Name], [File As], [Student Attendance.ID], Student, [Attendance Date], Status, [Students.ID], [Last Name], [First Name], [E-mail Address], [Student ID], [Level], Room, [Date of Birth], [ID Number], [Home Phone], [Mobile Phone], Address, City, [State/Province], [ZIP/Postal Code], [Country/Region], [Web Page], Notes, Attachments, [Special Circumstances], [Physician Name], [Physician Phone Number], Allergies, Medications, [Insurance Carrier], [Insurance Number] FROM [Student Attendance Extended]";
+            this._commandCollection[0].CommandText = @"SELECT [Student Name], [File As], [Student Attendance.ID], Student,
+                                            [Attendance Date], Status, [Students.ID], [Last Name], [First Name], [E-mail
+                                            Address], [Student ID], [Level], Room, [Date of Birth], [ID Number], [Home
+                                            Phone], [Mobile Phone], Address, City, [State/Province], [ZIP/Postal Code],
+                                            [Country/Region], [Web Page], Notes, Attachments, [Special Circumstances],
+                                            [Physician Name], [Physician Phone Number], Allergies, Medications,
+                                            [Insurance Carrier], [Insurance Number] FROM [Student Attendance Extended]
+                                        ";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -13431,9 +13489,10 @@ namespace EverythingToolbar.DataSet1TableAdapters {
             this._commandCollection = new global::System.Data.Odbc.OdbcCommand[1];
             this._commandCollection[0] = new global::System.Data.Odbc.OdbcCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT [Student Name], [Guardian Name], StudentID, GuardianID, Relationship, [E-m" +
-                "ail Address], [Business Phone], [Home Phone], [Mobile Phone], [Emergency Contact" +
-                "] FROM [Students and Guardians Extended]";
+            this._commandCollection[0].CommandText = @"SELECT [Student Name], [Guardian Name], StudentID, GuardianID,
+                                            Relationship, [E-mail Address], [Business Phone], [Home Phone], [Mobile
+                                            Phone], [Emergency Contact] FROM [Students and Guardians Extended]
+                                        ";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -13627,7 +13686,14 @@ namespace EverythingToolbar.DataSet1TableAdapters {
             this._commandCollection = new global::System.Data.Odbc.OdbcCommand[1];
             this._commandCollection[0] = new global::System.Data.Odbc.OdbcCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT [File As], [Student Name], ID, [Last Name], [First Name], [E-mail Address], [Student ID], [Level], Room, [Date of Birth], [ID Number], [Home Phone], [Mobile Phone], Address, City, [State/Province], [ZIP/Postal Code], [Country/Region], [Web Page], Notes, Attachments, [Special Circumstances], [Physician Name], [Physician Phone Number], Allergies, Medications, [Insurance Carrier], [Insurance Number] FROM [Students Extended]";
+            this._commandCollection[0].CommandText = @"SELECT [File As], [Student Name], ID, [Last Name], [First Name],
+                                            [E-mail Address], [Student ID], [Level], Room, [Date of Birth], [ID Number],
+                                            [Home Phone], [Mobile Phone], Address, City, [State/Province], [ZIP/Postal
+                                            Code], [Country/Region], [Web Page], Notes, Attachments, [Special
+                                            Circumstances], [Physician Name], [Physician Phone Number], Allergies,
+                                            Medications, [Insurance Carrier], [Insurance Number] FROM [Students
+                                            Extended]
+                                        ";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

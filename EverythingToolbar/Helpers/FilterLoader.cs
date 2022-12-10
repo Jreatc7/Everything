@@ -1,12 +1,14 @@
-﻿using EverythingToolbar.Data;
-using Microsoft.VisualBasic.FileIO;
-using System;
+﻿using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Drawing.Text;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
+
+using EverythingToolbar.Data;
+
+using Microsoft.VisualBasic.FileIO;
 
 namespace EverythingToolbar.Helpers
 {
@@ -46,7 +48,7 @@ namespace EverythingToolbar.Helpers
             }
         };
         public ObservableCollection<Filter> DefaultFilters
-        { 
+        {
             get
             {
                 if (Properties.Settings.Default.isRegExEnabled)
@@ -59,7 +61,7 @@ namespace EverythingToolbar.Helpers
                 }
             }
         }
-        
+
 
         public readonly ObservableCollection<Filter> DefaultUserFilters = new ObservableCollection<Filter>()
         {
@@ -126,7 +128,7 @@ namespace EverythingToolbar.Helpers
         };
         private ObservableCollection<Filter> userFiltersCache;
         public ObservableCollection<Filter> UserFilters
-        { 
+        {
             get
             {
                 if (Properties.Settings.Default.isRegExEnabled)

@@ -1,6 +1,7 @@
-﻿using NLog;
+﻿using System.IO;
+
+using NLog;
 using NLog.Config;
-using System.IO;
 
 namespace EverythingToolbar
 {
@@ -20,7 +21,8 @@ namespace EverythingToolbar
 
         public static void Initialize()
         {
-            var logfile = new NLog.Targets.FileTarget("logfile") {
+            var logfile = new NLog.Targets.FileTarget("logfile")
+            {
                 FileName = Path.Combine(Path.GetTempPath(), "EverythingToolbar.log"),
                 ArchiveEvery = NLog.Targets.FileArchivePeriod.Day,
                 ArchiveNumbering = NLog.Targets.ArchiveNumberingMode.Date,

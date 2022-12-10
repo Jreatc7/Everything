@@ -1,11 +1,13 @@
-using EverythingToolbar.Helpers;
-using NHotkey;
 using System;
 using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Interop;
+
+using EverythingToolbar.Helpers;
+
+using NHotkey;
 
 namespace EverythingToolbar
 {

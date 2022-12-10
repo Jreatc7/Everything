@@ -1,6 +1,7 @@
-﻿using EverythingToolbar.Data;
+﻿using System.Windows.Controls;
+
+using EverythingToolbar.Data;
 using EverythingToolbar.Helpers;
-using System.Windows.Controls;
 
 namespace EverythingToolbar
 {

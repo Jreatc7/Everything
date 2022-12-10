@@ -1,10 +1,11 @@
-﻿using CSDeskBand;
-using System;
+﻿using System;
 using System.Windows;
 using System.Windows.Controls.Primitives;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
+
+using CSDeskBand;
 
 namespace EverythingToolbar
 {
@@ -15,7 +16,7 @@ namespace EverythingToolbar
         public static double taskbarWidth = 0;
         Size dragStartSize = new Size();
         Point dragStartPosition = new Point();
-        
+
         public new double Height
         {
             get
@@ -29,7 +30,7 @@ namespace EverythingToolbar
                 SetValue(HeightProperty, newHeight);
             }
         }
-        
+
         public new double Width
         {
             get

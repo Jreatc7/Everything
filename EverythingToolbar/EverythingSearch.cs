@@ -1,7 +1,4 @@
-﻿using EverythingToolbar.Data;
-using EverythingToolbar.Helpers;
-using NLog;
-using System;
+﻿using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Diagnostics;
@@ -12,6 +9,11 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Data;
 using System.Windows.Forms;
+
+using EverythingToolbar.Data;
+using EverythingToolbar.Helpers;
+
+using NLog;
 
 namespace EverythingToolbar
 {
@@ -317,7 +319,7 @@ namespace EverythingToolbar
 
         public void OpenLastSearchInEverything(string highlighted_file = "")
         {
-            if(!File.Exists(Properties.Settings.Default.everythingPath))
+            if (!File.Exists(Properties.Settings.Default.everythingPath))
             {
                 MessageBox.Show(Properties.Resources.MessageBoxSelectEverythingExe);
                 using (OpenFileDialog openFileDialog = new OpenFileDialog())
@@ -376,7 +378,7 @@ namespace EverythingToolbar
 
         private void HandleError(ErrorCode code)
         {
-            switch(code)
+            switch (code)
             {
                 case ErrorCode.EVERYTHING_ERROR_MEMORY:
                     logger.Error("Failed to allocate memory for the search query.");
